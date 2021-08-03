@@ -1,0 +1,52 @@
+{
+    "type": "origins:swimming",
+    "condition":
+	{
+        "type": "origins:on_block"
+    }
+},
+{
+    "type": "origins:invisibility",
+    "render_armor": false,
+    "condition":
+	{
+        "type": "origins:on_fire",
+        "inverted": true
+    }
+},
+{
+    "type": "origins:model_color",
+    "red": 0.5,
+    "green": 0.5,
+    "alpha": 0.7
+},
+{
+	"type": "origins:attribute",
+	"modifier":
+	{
+		"attribute": "minecraft:generic.movement_speed",
+		"value": 1.4,
+		"operation": "multiply_base"
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+	"type": "origins:modify_swim_speed",
+	"modifier":
+	{
+		"value": 1.5,
+		"operation": "multiply_base"
+	}
+}

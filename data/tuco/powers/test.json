@@ -1,0 +1,22 @@
+{
+	"name": "Atium",
+    "description": "Burn atium to see briefly into the future.",
+	"type": "origins:multiple",
+	"blur":
+	{
+		"type": "origins:shader",
+		"shader": "minecraft:shaders/post/phosphor.json"
+	},
+	"vignette":
+	{
+		"type": "origins:phasing",
+		"blacklist": false,
+		"render_type": "blindness",
+		"view_distance": 15,
+		"block_condition":
+		{
+		"type": "origins:block",
+		"block": "minecraft:air"
+		}
+	}
+}

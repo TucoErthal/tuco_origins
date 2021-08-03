@@ -1,0 +1,11 @@
+{
+	"type": "origins:phasing",
+	"blacklist": false,
+	"render_type": "blindness",
+	"view_distance": 15,
+	"block_condition":
+	{
+		"type": "origins:block",
+		"block": "minecraft:air"
+	}
+}

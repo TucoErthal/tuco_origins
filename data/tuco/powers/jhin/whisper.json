@@ -1,0 +1,31 @@
+{
+	"type": "origins:multiple",
+	"attack":
+	{
+		"type": "origins:fire_projectile",
+		"entity_type": "minecraft:snowball",
+		"cooldown": 20,
+		"speed": 5,
+		"divergence": 0.1,
+		"hud_render":
+		{
+			"sprite_location": "origins:textures/gui/jhin_resource_bar.png",
+			"bar_index": 4
+		},
+		"key":
+		{
+			"key": "key.origins.primary_active"
+		},
+		"tag": "{Silent:1b,Tags:[\"4thshot\"],Item:{id:\"minecraft:iron_nugget\",Count:1b}}",
+		"sound": "minecraft:entity.shulker.shoot"
+	}
+},
+	{
+		"type": "origins:action_over_time",
+		"entity_action":
+		{
+			"type": "origins:execute_command",
+			"command": "execute at @e[nbt={Tags:[4thshot]}] run particle minecraft:smoke ~ ~ ~ 0 0 0 0 10 force"
+		},
+		"interval": 5
+	}

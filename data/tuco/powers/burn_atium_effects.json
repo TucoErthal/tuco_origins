@@ -1,0 +1,89 @@
+{
+	"hidden": true,
+	"type": "origins:multiple",
+	"drain":
+	{
+		"type": "origins:action_over_time",
+		"entity_action":
+		{
+			"type": "origins:change_resource",
+			"resource": "tuco:atium_reserve",
+			"change": -1
+		},
+		"interval": 1,
+		"condition":
+		{
+			"type": "origins:and",
+			"conditions": 
+			[
+				{
+					"type": "origins:power_active",
+					"power": "tuco:burn_atium_toggle"
+				},
+				{      
+					"type": "origins:resource",
+					"resource": "tuco:atium_reserve",
+					"comparison": ">",
+					"compare_to": 0
+				}
+			]
+		}
+	},
+	"blur":
+	{
+		"type": "origins:shader",
+		"shader": "minecraft:shaders/post/phosphor.json",
+		"condition":
+		{
+			"type": "origins:and",
+			"conditions": 
+			[
+				{
+					"type": "origins:power_active",
+					"power": "tuco:burn_atium_toggle"
+				},
+				{      
+					"type": "origins:resource",
+					"resource": "tuco:atium_reserve",
+					"comparison": ">",
+					"compare_to": 0
+				}
+			]
+		}
+	},
+	"resistance":
+	{
+		"type": "origins:conditioned_attribute",
+		"modifiers":
+		[
+			{
+				"attribute": "minecraft:generic.knockback_resistance",
+				"operation": "addition",
+				"value": 1
+			},
+			{
+				"attribute": "minecraft:generic.armor",
+				"operation": "addition",
+				"value": 2
+			}
+		],
+		"tick_rate": 20,
+		"condition":
+		{
+			"type": "origins:and",
+			"conditions": 
+			[
+				{
+					"type": "origins:power_active",
+					"power": "tuco:burn_atium_toggle"
+				},
+				{      
+					"type": "origins:resource",
+					"resource": "tuco:atium_reserve",
+					"comparison": ">",
+					"compare_to": 0
+				}
+			]
+		}
+    }
+}

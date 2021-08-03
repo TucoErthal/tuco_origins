@@ -1,0 +1,231 @@
+{
+	"type": "origins:multiple",
+	"faith":
+	{
+		"type": "origins:resource",
+		"min": 0,
+		"max": 1,
+		"start_value": 1,
+		"hud_render":
+		{
+			"should_render": false
+		}
+	},
+	"approach_ruin":
+	{
+		"type": "origins:action_over_time",
+		"entity_action":
+		{
+			"type": "origins:and",
+			"actions":
+			[
+				{
+					"type": "origins:execute_command",
+					"command": "title @s actionbar {\"text\":\"Press [B] to worship Ruin\"}"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle minecraft:white_ash ~ ~1 ~ 1 1 1 1 20 force @s"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "playsound minecraft:ambient.soul_sand_valley.mood ambient @s ~ ~ ~ 0.02 1"
+				}
+			]
+		},
+		"interval": 5,
+		"condition":
+		{
+			"type": "origins:and",
+			"conditions":
+			[
+				{
+					"type": "origins:command",
+					"command": "execute if entity @e[nbt={Tags:[\"idol_of_ruin\"]}, distance=..2]",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{      
+					"type": "origins:resource",
+					"resource": "tuco:worship_faith",
+					"comparison": "==",
+					"compare_to": 1
+				}
+			]
+		}
+	},
+	"approach_prometheus":
+	{
+		"type": "origins:action_over_time",
+		"entity_action":
+		{
+			"type": "origins:and",
+			"actions":
+			[
+				{
+					"type": "origins:execute_command",
+					"command": "title @s actionbar {\"text\":\"Press [B] to worship Prometheus\"}"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle minecraft:flame ~ ~1 ~ 1.5 1.5 1.5 0.01 5 force @s"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "playsound minecraft:block.campfire.crackle ambient @s ~ ~ ~ 0.06 0.8"
+				}
+			]
+		},
+		"interval": 5,
+		"condition":
+		{
+			"type": "origins:and",
+			"conditions":
+			[
+				{
+					"type": "origins:command",
+					"command": "execute if entity @e[nbt={Tags:[\"idol_of_prometheus\"]}, distance=..2]",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{      
+					"type": "origins:resource",
+					"resource": "tuco:worship_faith",
+					"comparison": "==",
+					"compare_to": 1
+				}
+			]
+		}
+	},
+	"approach_hermes":
+	{
+		"type": "origins:action_over_time",
+		"entity_action":
+		{
+			"type": "origins:and",
+			"actions":
+			[
+				{
+					"type": "origins:execute_command",
+					"command": "title @s actionbar {\"text\":\"Press [B] to worship Hermes\"}"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle minecraft:sweep_attack ~ ~ ~ 1.5 0 1.5 1 5 force @s"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "playsound minecraft:entity.phantom.ambient ambient @s ~ ~ ~ 0.02 0.8"
+				}
+			]
+		},
+		"interval": 5,
+		"condition":
+		{
+			"type": "origins:and",
+			"conditions":
+			[
+				{
+					"type": "origins:command",
+					"command": "execute if entity @e[nbt={Tags:[\"idol_of_hermes\"]}, distance=..2]",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{      
+					"type": "origins:resource",
+					"resource": "tuco:worship_faith",
+					"comparison": "==",
+					"compare_to": 1
+				}
+			]
+		}
+	},
+	"active":
+	{
+		"type": "origins:active_self",
+		"entity_action":
+		{
+			"type": "origins:and",
+			"actions":
+			[
+				{
+					"type": "origins:if_else_list",
+					"actions":
+					[
+						{
+							"condition":
+							{
+								"type": "origins:command",
+								"command": "execute if entity @e[nbt={Tags:[\"idol_of_ruin\"]}, distance=..2]",
+								"comparison": "==",
+								"compare_to": 1
+							},
+							"action":
+							{
+								"type": "origins:execute_command",
+								"command": "power grant @s tuco:ruin"
+							}
+						},
+						{
+							"condition":
+							{
+								"type": "origins:command",
+								"command": "execute if entity @e[nbt={Tags:[\"idol_of_prometheus\"]}, distance=..2]",
+								"comparison": "==",
+								"compare_to": 1
+							},
+							"action":
+							{
+								"type": "origins:execute_command",
+								"command": "power grant @s tuco:prometheus"
+							}
+						},
+						{
+							"condition":
+							{
+								"type": "origins:command",
+								"command": "execute if entity @e[nbt={Tags:[\"idol_of_hermes\"]}, distance=..2]",
+								"comparison": "==",
+								"compare_to": 1
+							},
+							"action":
+							{
+								"type": "origins:execute_command",
+								"command": "power grant @s tuco:hermes"
+							}
+						}
+					]
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "tuco:worship_faith",
+					"change": -1
+				},
+				{    
+					"type": "origins:play_sound",
+					"sound": "minecraft:block.beacon.power_select"
+				}
+			]
+		},
+		"cooldown": 0,
+		"key":
+		{
+			"key": "key.origins.denary_active"
+		},
+		"hud_render":
+		{
+			"should_render": false
+		},
+		"condition":
+		{
+			"type": "origins:resource",
+			"resource": "tuco:worship_faith",
+			"comparison": "==",
+			"compare_to": 1
+		}
+	},
+	"forsake":
+	{
+		
+	}
+}

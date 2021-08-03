@@ -1,0 +1,29 @@
+{
+	"replace": false,
+	"values":
+	[
+		"minecraft:iron_ore",
+		"minecraft:deepslate_iron_ore",
+		"minecraft:copper_ore",
+		"minecraft:deepslate_copper_ore",
+		"minecraft:gold_ore",
+		"minecraft:deepslate_gold_ore",
+		"minecraft:nether_gold_ore",
+		"minecraft:iron_bars",
+		"minecraft:chain",
+		"minecraft:lightning_rod",
+		"minecraft:tripwire_hook",
+		"minecraft:light_weighted_pressure_plate",
+		"minecraft:heavy_weighted_pressure_plate",
+		"minecraft:iron_trapdoor",
+		"minecraft:powered_rail",
+		"minecraft:detector_rail",
+		"minecraft:rail",
+		"minecraft:activator_rail",
+		"minecraft:bell",
+		"minecraft:piston",
+		"minecraft:sticky_piston",
+		"minecraft:lantern",
+		"minecraft:soul_lantern"
+	]
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Akali",
+    "description": "I don't know if I'll make porn of this",
+	"powers": [
+		"tuco:energy",
+		"tuco:energy_regen",
+		"tuco:kunai",
+        "tuco:smoke",
+		"tuco:execution",
+		"tuco:derby"
+    ],
+    "icon": "minecraft:arrow",
+    "order": 6,
+    "impact": 1
+}

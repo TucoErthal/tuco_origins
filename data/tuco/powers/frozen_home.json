@@ -1,0 +1,6 @@
+{
+  "type": "origins:modify_player_spawn",
+  "dimension": "tuco:frost",
+  "dimension_distance_multiplier": 0.125,
+  "spawn_strategy": "center"
+}

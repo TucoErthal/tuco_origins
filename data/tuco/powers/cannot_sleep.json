@@ -1,0 +1,6 @@
+{
+    "type": "origins:prevent_sleep",
+	"name": "Accursed Undead",
+    "description": "Ash seeketh embers.",
+    "message": "The dead cannot sleep. Rest by a bonfire."
+}

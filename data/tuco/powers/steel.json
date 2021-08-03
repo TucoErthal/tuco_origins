@@ -1,0 +1,98 @@
+{
+	"name": "Steel Reserve",
+	"description": "Draw on your pool of Steel to detect and Push metals.",
+	"type": "origins:multiple",
+	"reserve":
+	{
+		"type": "origins:resource",
+		"min": 0,
+		"max": 81,
+		"start_value": 27,
+		"hud_render":
+		{
+			"sprite_location": "origins:textures/gui/resource_bar.png",
+			"bar_index": 0
+		}
+	},
+	"starting_equipment":
+	{
+		"type": "origins:action_on_callback",
+		"entity_action_chosen":
+		{
+			"type": "origins:give",
+			"stacks":
+			[
+				{
+					"item": "minecraft:spectral_arrow",
+					"amount": 16
+				},
+				{
+					"item": "minecraft:glass_bottle",
+					"amount": 4
+				}
+			]
+		}
+	},
+	"potion":
+	{
+		"type": "origins:action_on_item_use",
+		"hidden": true,
+		"entity_action":
+		{
+			"type": "origins:change_resource",
+			"resource": "tuco:steel_reserve",
+			"change": 9
+		},
+		"item_condition":
+		{
+			"type": "origins:ingredient",
+			"ingredient":
+			{
+				"item": "minecraft:potion"
+			}
+		}
+	},
+	"ironrichfood":
+	{
+		"type": "origins:action_on_item_use",
+		"hidden": true,
+		"entity_action":
+		{
+			"type": "origins:change_resource",
+			"resource": "tuco:steel_reserve",
+			"change": 27
+		},
+		"item_condition":
+		{
+			"type": "origins:ingredient",
+			"ingredient":
+			{
+				"tag": "tuco:iron_rich_food"
+			}
+		}
+	},
+	"golden_apple":
+	{
+		"type": "origins:action_on_item_use",
+		"hidden": true,
+		"entity_action":
+		{
+			"type": "origins:change_resource",
+			"resource": "tuco:steel_reserve",
+			"change": 81
+		},
+		"item_condition":
+		{
+			"type": "origins:ingredient",
+			"ingredient":
+			[
+				{
+					"item": "minecraft:golden_apple"
+				},
+				{
+					"item": "minecraft:enchanted_golden_apple"
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"name": "Atium",
+    "description": "Burn atium to see briefly into the future.",
+	"type": "origins:toggle",
+	"active_by_default": false,
+	"key":
+	{
+		"key": "key.origins.primary_active"
+	}
+}

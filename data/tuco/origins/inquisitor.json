@@ -1,0 +1,14 @@
+{
+    "powers":
+	[
+		"tuco:cold",
+		"tuco:atium_reserve",
+		"tuco:burn_atium_toggle",
+		"tuco:burn_atium_effects"
+    ],
+    "icon": "minecraft:netherite_ingot",
+    "order": 1,
+    "impact": 1,
+    "name": "Inquisitor",
+    "description": "Twisted human constructs"
+}

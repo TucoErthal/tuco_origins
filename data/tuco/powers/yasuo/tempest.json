@@ -1,0 +1,119 @@
+{
+	"type": "origins:multiple",
+	"stacks":
+	{
+		"type": "origins:resource",
+		"min": 0,
+		"max": 3,
+		"hud_render":
+		{
+			"sprite_location": "origins:textures/gui/hasagi2_resource_bar.png",
+			"bar_index": 0
+		}
+	},
+	"attack":
+	{
+		"type": "origins:self_action_on_hit",
+		"entity_action":
+		{
+			"type": "origins:and",
+			"actions":
+			[
+				{
+					"type": "origins:change_resource",
+					"resource": "tuco:yasuo/tempest_stacks",
+					"change": 1
+				},
+				{
+					"type": "origins:trigger_cooldown",
+					"power": "tuco:yasuo/tempest_tornado"
+				}
+			]			
+		},
+		"cooldown": 0,
+		"condition":
+		{
+			"type": "origins:resource",
+			"resource": "tuco:yasuo/tempest_stacks",
+			"comparison": "!=",
+			"compare_to": 3
+		}
+	},
+	"tornado":
+	{
+		"type": "origins:target_action_on_hit",
+		"entity_action":
+		{
+			"type": "origins:and",
+			"actions":
+			[
+				{
+					"type": "origins:add_velocity",
+					"y": 0.4
+				},
+				{
+					"type": "origins:apply_effect",
+					"effect":
+					{
+						"effect": "minecraft:slow_falling",
+						"duration": 20,
+						"show_particles": false,
+						"show_icon": false
+					}
+				},
+				{
+					"type": "origins:gain_air",
+					"value": 100
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle minecraft:white_ash ~ ~1 ~ 0.4 0.6 0.4 1 500 force @a"
+				}
+			]
+		},
+		"cooldown": 20,
+		"condition":
+		{
+			"type": "origins:resource",
+			"resource": "tuco:yasuo/tempest_stacks",
+			"comparison": "==",
+			"compare_to": 3
+		}
+	},
+	"tornadoself":
+	{
+		"type": "origins:self_action_on_hit",
+		"entity_action":
+		{
+			"type": "origins:and",
+			"actions":
+			[
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:item.trident.riptide_1"
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "tuco:yasuo/tempest_stacks",
+					"change": -3
+				},
+				{
+					"type": "origins:gain_air",
+					"value": 100
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "function tuco:hasagi"
+				}
+			]
+		},
+		"cooldown": 20,
+		"condition":
+		{
+			"type": "origins:resource",
+			"resource": "tuco:yasuo/tempest_stacks",
+			"comparison": "==",
+			"compare_to": 3
+		}
+	}
+}

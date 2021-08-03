@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:chest_minecart",
+	"minecraft:command_block_minecart",
+	"minecraft:falling_block",
+	"minecraft:furnace_minecart",
+	"minecraft:hopper_minecart",
+	"minecraft:iron_golem",
+	"minecraft:minecart",
+	"minecraft:piglin",
+	"minecraft:piglin_brute",
+	"minecraft:pillager",
+	"minecraft:ravager",
+	"minecraft:spawner_minecart",
+	"minecraft:spectral_arrow",
+	"minecraft:tnt_minecart",
+	"minecraft:vindicator"
+  ]
+}

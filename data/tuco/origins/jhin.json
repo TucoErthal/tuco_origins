@@ -1,0 +1,15 @@
+{
+    "powers":
+	[
+		"tuco:cold",
+		"tuco:jhin/whisper",
+		"tuco:jhin/reload",
+		"tuco:jhin/reload_active",
+		"tuco:jhin/4"
+    ],
+    "icon": "minecraft:skeleton_skull",
+    "order": 6,
+    "impact": 2,
+    "name": "Dinho",
+    "description": "Virtuoso"
+}

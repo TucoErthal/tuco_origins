@@ -1,0 +1,15 @@
+{
+	"type": "origins:multiple",
+	"meter":
+	{
+		"type": "origins:resource",
+		"min": 0,
+		"max": 100,
+		"start_value": 100,
+		"hud_render":
+		{
+			"sprite_location": "origins:textures/gui/hasagi_resource_bar.png",
+			"bar_index": 5
+		}
+	}
+}

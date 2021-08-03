@@ -1,0 +1,13 @@
+{
+    "name": "Steel Reserve",
+	"description": "Draw on your pool of Steel to detect and Push metals.",
+	"type": "origins:resource",
+    "min": 0,
+    "max": 540,
+    "start_value": 180,
+    "hud_render":
+	{
+		"sprite_location": "origins:textures/gui/resource_bar.png",
+		"bar_index": 0
+    }
+}

@@ -1,0 +1,70 @@
+
+		"condition":
+		{
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition":
+			{
+				"type": "origins:ingredient",
+				"ingredient":
+				{
+					"item": "minecraft:gold_nugget"
+				}
+			}	
+		}
+		
+		
+{
+    "type": "origins:fire_projectile",
+    "name": "Coinshot",
+    "description": "Flare steel and spray coins!",
+	"cooldown": 0,
+	"hud_render": 
+	{
+		"sprite_location": "origins:textures/gui/resource_bar.png",
+		"bar_index": 7
+	},
+    "count": 8,
+    "speed": 2,
+    "divergence": 15,
+    "entity_type": "minecraft:snowball",
+	"sound": "minecraft:block.chain.break",
+    "key":
+	{
+        "key": "key.attack",
+        "continuous": true
+    },
+	"condition":
+	{
+		"type": "origins:equipped_item",
+		"equipment_slot": "mainhand",
+		"item_condition":
+		{
+			"type": "origins:ingredient",
+			"ingredient":
+			{
+				"item": "minecraft:gold_nugget"
+			}
+		}	
+	}
+}
+
+
+
+,
+	"minecraft:exposed_copper",
+	"minecraft:weathered_copper",
+	"minecraft:oxidized_copper",
+	"minecraft:cut_copper",
+	"minecraft:exposed_cut_copper",
+	"minecraft:weathered_cut_copper",
+	"minecraft:oxidized_cut_copper",
+	"minecraft:anvil",
+	"minecraft:chipped_anvil",
+	"minecraft:damaged_anvil",
+	"minecraft:hopper",
+	"minecraft:iron_door",
+	"minecraft:cauldron",
+	"minecraft:blast_furnace",
+	"minecraft:smithing_table",
+	"minecraft:lodestone"

@@ -1,0 +1,129 @@
+{
+	"name": "Steelpush",
+    "description": "Soar through the mists",
+	"type": "origins:multiple",
+	"launch":
+	{
+		"type": "origins:active_self",
+		"cooldown": 2,
+		"entity_action":
+		{
+			"type": "origins:and",
+			"actions":
+			[
+				{
+					"type": "origins:change_resource",
+					"resource": "tuco:steel_reserve",
+					"change": -1
+				},
+				{
+					"type": "origins:add_velocity",
+					"space": "local",
+					"z": 1
+				},
+				{
+					"type": "origins:set_fall_distance",
+					"fall_distance": 0
+				},
+				{    
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.phantom.flap"
+				}
+			]
+		},
+		"hud_render":
+		{
+			"should_render": false
+		},
+		"key":
+		{
+			"key": "key.origins.primary_active",
+			"continuous": true
+		},
+		"condition":
+		{
+			"type": "origins:and",
+			"conditions":
+			[
+				{	
+					"type": "origins:or",
+					"conditions":
+					[
+						{    
+							"type": "origins:block_in_radius",
+							"block_condition":
+							{
+								"type": "origins:in_tag",
+								"tag": "tuco:light_metal_blocks"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 2
+						},
+						{    
+							"type": "origins:block_in_radius",
+							"block_condition":
+							{
+								"type": "origins:in_tag",
+								"tag": "tuco:heavy_metal_blocks"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 1
+						}
+					]
+				},
+				{
+					"type": "origins:resource",
+					"resource": "tuco:steel_reserve",
+					"comparison": ">=",
+					"compare_to": 1
+				}
+			]
+			
+		}
+	},
+	"detection":
+	{
+		"type": "origins:phasing",
+		"blacklist": false,
+		"block_condition":
+		{
+			"type": "origins:block",
+			"block": "minecraft:air"
+		},
+		"condition":
+		{
+			"type": "origins:or",
+			"conditions":
+			[
+				{    
+					"type": "origins:block_in_radius",
+					"block_condition":
+					{
+						"type": "origins:in_tag",
+						"tag": "tuco:light_metal_blocks"
+					},
+					"radius": 3,
+					"shape": "cube",
+					"comparison": ">=",
+					"compare_to": 2
+				},
+				{    
+					"type": "origins:block_in_radius",
+					"block_condition":
+					{
+						"type": "origins:in_tag",
+						"tag": "tuco:heavy_metal_blocks"
+					},
+					"radius": 3,
+					"shape": "cube",
+					"comparison": ">=",
+					"compare_to": 1
+				}
+			]
+		}
+	}
+}

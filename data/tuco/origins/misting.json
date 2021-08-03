@@ -1,0 +1,15 @@
+{
+    "name": "Allomancer",
+    "description": "Embrace the swirling mists, soar through the night.",
+	"powers": [
+		"tuco:cold",
+		"tuco:worship",
+		"tuco:steel",
+        "tuco:steelpush",
+		"tuco:coinshot",
+		"tuco:hazekiller_weakness"
+    ],
+    "icon": "minecraft:iron_ingot",
+    "order": -999,
+    "impact": 1
+}

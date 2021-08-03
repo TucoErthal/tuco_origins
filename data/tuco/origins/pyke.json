@@ -1,0 +1,12 @@
+{
+    "powers":
+	[
+		"tuco:cold",
+		"tuco:passive"
+    ],
+    "icon": "minecraft:cooked_cod",
+    "order": 6,
+    "impact": 2,
+    "name": "Pyke",
+    "description": "The Bloodharbor Ripper"
+}

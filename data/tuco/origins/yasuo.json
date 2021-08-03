@@ -1,0 +1,14 @@
+{
+    "powers":
+	[
+		"tuco:cold",
+		"tuco:yasuo/errante",
+		"tuco:yasuo/tempest",
+		"tuco:yasuo/dash"
+    ],
+    "icon": "minecraft:iron_sword",
+    "order": 9,
+    "impact": 3,
+    "name": "Inhasu",
+    "description": "O imperduaveu"
+}

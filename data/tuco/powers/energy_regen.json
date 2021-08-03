@@ -1,0 +1,48 @@
+{
+	"type": "origins:multiple",
+	"regen":
+	{
+		"type": "origins:action_over_time",
+		"entity_action":
+		{
+			"type": "origins:change_resource",
+			"resource": "tuco:energy",
+			"change": 1
+		},
+		"interval": 2
+	},
+	"stamina":
+	{
+		"type": "origins:action_over_time",
+		"entity_action":
+		{
+			"type": "origins:change_resource",
+			"resource": "tuco:energy",
+			"change": -2
+		},
+		"interval": 2,
+		"condition":
+		{
+			"type": "origins:sprinting"
+		}
+	},
+	"slowness":
+	{
+		
+		"type": "origins:conditioned_attribute",
+		"modifier":
+		{
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "addition",
+			"value": -0.04
+		},
+		"tick_rate": 20,
+		"condition":
+		{
+			"type": "origins:resource",
+			"resource": "tuco:energy",
+			"comparison": "<",
+			"compare_to": 1
+		}
+	}
+}

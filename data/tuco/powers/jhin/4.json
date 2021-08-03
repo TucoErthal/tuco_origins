@@ -1,0 +1,68 @@
+{
+	"type": "origins:multiple",
+	"attack":
+	{
+		"type": "origins:self_action_on_hit",
+		"entity_action":
+		{
+			"type": "origins:change_resource",
+			"resource": "tuco:jhin/whisper",
+			"change": -1
+		},
+		"cooldown": 0
+	},
+	"four":
+	{
+		"type": "origins:modify_projectile_damage",
+		"damage_condition":
+		{
+			"type": "origins:projectile"
+		},
+		"modifier":
+		{
+			"operation": "addition",
+			"value": 8.0
+		},
+		"condition":
+		{
+			"type": "origins:resource",
+			"resource": "tuco:jhin/whisper",
+			"comparison": "==",
+			"compare_to": 1
+		}
+	},
+	"regen":
+	{
+		"type": "origins:action_over_time",
+		"entity_action":
+		{
+			"type": "origins:change_resource",
+			"resource": "tuco:jhin/whisper",
+			"change": 1
+		},
+		"interval": 20,
+		"condition":
+		{
+			"type": "origins:sprinting"
+		}
+	},
+	"speedonreload":
+	{
+		
+		"type": "origins:conditioned_attribute",
+		"modifier":
+		{
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "addition",
+			"value": 0.04
+		},
+		"tick_rate": 20,
+		"condition":
+		{
+			"type": "origins:resource",
+			"resource": "tuco:jhin/whisper",
+			"comparison": "==",
+			"compare_to": 0
+		}
+	}
+}

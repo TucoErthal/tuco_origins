@@ -1,0 +1,11 @@
+{
+    "powers": [
+        "tuco:frozen_home",
+        "origins:throw_ender_pearl"
+    ],
+    "icon": "minecraft:snowball",
+    "order": 4,
+    "impact": 1,
+    "name": "Drifter",
+    "description": "Shrouded by the mist"
+}

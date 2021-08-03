@@ -1,0 +1,36 @@
+{
+	"type": "origins:active_self",
+	"cooldown": 30,
+	"entity_action":
+	{
+		"type": "origins:and",
+		"actions":
+		[
+			{
+				"type": "origins:trigger_cooldown",
+				"power": "tuco:jhin/reload"
+			},
+			{
+				"type": "origins:delay",
+				"ticks": 50,
+				"action":
+				{
+					"type": "origins:change_resource",
+					"resource": "tuco:jhin/whisper",
+					"change": 4
+				}
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "minecraft:entity.phantom.flap"
+			}
+		]
+	},
+	"condition":
+	{
+		"type": "origins:resource",
+		"resource": "tuco:jhin/whisper",
+		"comparison": "==",
+		"compare_to": 0
+	}
+}

@@ -1,0 +1,126 @@
+{
+	"name": "Perfect Execution",
+    "description": "point & click",
+	"type": "origins:multiple",
+	"q":
+	{
+		"type": "origins:fire_projectile",
+		"cooldown": 30,
+		"hud_render": 
+		{
+			"should_render": false
+		},
+		"count": 5,
+		"speed": 1,
+		"divergence": 50,
+		"entity_type": "minecraft:arrow",
+		"tag": "{pickup:0b}",
+		"sound": "minecraft:entity.drowned.shoot",
+		"key":
+		{
+			"key": "key.origins.primary_active"
+		},
+		"condition":
+		{
+			"type": "origins:and",
+			"conditions":
+			[
+				{
+					"type": "origins:resource",
+					"resource": "tuco:energy",
+					"comparison": ">=",
+					"compare_to": 130
+				}
+			]
+		}
+	},
+	"q_energy":
+	{
+		
+	},
+	"e_dash":
+	{
+		"type": "origins:active_self",
+		"cooldown": 320,
+		"key":
+		{
+			"key": "key.origins.secondary_active"
+		},
+		"hud_render":
+		{
+			"should_render": false
+		},
+		"entity_action":
+		{
+			"type": "origins:and",
+			"actions":
+			[
+				{
+					"type": "origins:change_resource",
+					"resource": "tuco:energy",
+					"change": -30
+				},
+				{
+					"type": "origins:add_velocity",
+					"space": "local",
+					"z": -1.5
+				},
+				{    
+					"type": "origins:play_sound",
+					"sound": "minecraft:item.trident.riptide_1"
+				}
+			]
+		}
+	},
+	"e_shuriken":
+	{
+		"type": "origins:fire_projectile",
+		"cooldown": 320,
+		"hud_render": 
+		{
+			"should_render": false
+		},
+		"count": 1,
+		"speed": 10,
+		"divergence": 0,
+		"entity_type": "minecraft:spectral_arrow",
+		"tag": "{pickup:0b}",
+		"sound": "minecraft:entity.drowned.shoot",
+		"key":
+		{
+			"key": "key.origins.secondary_active"
+		},
+		"condition":
+		{
+			"type": "origins:and",
+			"conditions":
+			[
+				{
+					"type": "origins:resource",
+					"resource": "tuco:energy",
+					"comparison": ">=",
+					"compare_to": 130
+				}
+			]
+		}
+	},
+	"e_passive":
+	{
+		"type": "origins:modify_projectile_damage",
+		"damage_condition":
+		{
+			"type": "origins:projectile",
+			"projectile": "minecraft:spectral_arrow"
+		},
+		"self_action":
+		{
+			"type": "origins:apply_effect",
+			"effect":
+			{
+				"effect": "minecraft:speed",
+				"duration": 60,
+				"amplifier": 0
+			}
+		}
+	}
+}

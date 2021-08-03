@@ -1,0 +1,12 @@
+{
+    "powers": [
+        "tuco:cold",
+		"tuco:ember",
+		"tuco:cannot_sleep"
+    ],
+    "icon": "minecraft:gunpowder",
+    "order": 5,
+    "impact": 1,
+    "name": "Ashen One",
+    "description": "Nameless, accursed undead, unfit even to be cinders."
+}

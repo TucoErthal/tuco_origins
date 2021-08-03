@@ -1,0 +1,34 @@
+{
+	"type": "origins:active_self",
+	"cooldown": 15,
+	"entity_action":
+	{
+		"type": "origins:and",
+		"actions":
+		[
+			{
+				"type": "origins:add_velocity",
+				"space": "velocity_horizontal",
+				"z": 1.5
+			},
+			{    
+				"type": "origins:play_sound",
+				"sound": "minecraft:entity.axolotl.swim"
+			},
+			{    
+				"type": "origins:play_sound",
+				"sound": "minecraft:item.trident.return"
+			}
+		]
+	}	
+}
+
+
+
+
+{
+    "type": "origins:model_color",
+    "red": 0.5,
+    "green": 0.5,
+    "alpha": 0.7
+},

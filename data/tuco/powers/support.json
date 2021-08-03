@@ -1,0 +1,14 @@
+	{
+		"type": "origins:modify_projectile_damage",
+		"damage_condition":
+		{
+			"type": "origins:projectile",
+			"projectile": "minecraft:trident"
+		},
+		"target_action":
+		{
+			"type": "origins:add_velocity",
+			"z": 3,
+			"space": "local"
+		}
+	}

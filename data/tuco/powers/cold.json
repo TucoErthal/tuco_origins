@@ -1,0 +1,8 @@
+{
+    "type": "origins:shaking",
+    "condition":
+	{
+        "type": "origins:dimension",
+		"dimension": "tuco:frost"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "type": "origins:modify_food",
+	"name": "Estus",
+    "description": "Spicy hot drink. Best drunk warm.",
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+            "item": "minecraft:blaze_powder"
+        }
+    },
+	"entity_action": {
+	"type": "origins:apply_effect",
+	"effect": {
+		"effect": "minecraft:absorption",
+		"duration": 72000,
+		"amplifier": 10,
+		"is_ambient": true,
+        "show_particles": false,
+        "show_icon": false
+		}
+	},
+    "entity_action": {
+	"type": "origins:heal",
+	"amount": 18
+	}
+}

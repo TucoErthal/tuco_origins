@@ -1,0 +1,20 @@
+{
+	"type": "origins:multiple",
+	"range":
+	{
+		"type": "origins:attribute",
+		"modifiers":
+		[
+			{
+				"attribute": "reach-entity-attributes:reach",
+				"value": 20,
+				"operation": "addition"
+			},
+			{
+				"attribute": "generic.attack_knockback",
+				"value": -5,
+				"operation": "addition"
+			}
+		]
+	}
+}

@@ -1,0 +1,153 @@
+{
+	"name": "Coinshot",
+    "description": "Flare steel and spray coins!",
+	"type": "origins:multiple",
+	"coin_crafting":
+	{
+		"type": "origins:recipe",
+		"recipe":
+		{
+			"id": "tuco:master_of_webs/web_crafting",
+			"type": "minecraft:crafting_shapeless",
+			"ingredients":
+			[
+				{
+					"item": "minecraft:gold_nugget"
+				}
+			],
+			"result":
+			{
+				"item": "minecraft:spectral_arrow",
+				"count": 1
+			}
+		}
+    },
+	"active":
+	{
+		"type": "origins:fire_projectile",
+		"cooldown": 2,
+		"hud_render": 
+		{
+			"should_render": "false"
+		},
+		"count": 1,
+		"speed": 3,
+		"divergence": 6,
+		"entity_type": "minecraft:spectral_arrow",
+		"tag": "{Silent:0b,pickup:1b,shake:1b,PierceLevel:1b,SoundEvent:\"entity.blaze.hurt\"}",
+		"sound": "minecraft:block.chain.place",
+		"key":
+		{
+			"key": "key.use",
+			"continuous": true
+		},
+		"condition":
+		{
+			"type": "origins:and",
+			"conditions":
+			[
+				{	
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition":
+					{
+						"type": "origins:ingredient",
+						"ingredient":
+						{
+							"item": "minecraft:spectral_arrow"
+						}
+					}	
+				},
+				{
+					"type": "origins:resource",
+					"resource": "tuco:steel_reserve",
+					"comparison": ">=",
+					"compare_to": 1
+				}
+			]
+		}
+	},
+	"consume":
+	{
+		"type": "origins:active_self",
+		"entity_action":
+		{
+			"type": "origins:and",
+			"actions":
+			[
+				{
+					"type": "origins:change_resource",
+					"resource": "tuco:steel_reserve",
+					"change": -1
+				},
+				{
+					"type": "origins:equipped_item_action",
+					"equipment_slot": "mainhand",
+					"action":
+					{
+						"type": "origins:consume",
+						"amount": 1
+					}
+				},
+				{    
+					"type": "origins:play_sound",
+					"sound": "minecraft:block.chain.fall"
+				}
+			]
+		},
+		"cooldown": 2,
+		"key":
+		{
+			"key": "key.use",
+			"continuous": true
+		},
+		"condition":
+		{
+			"type": "origins:and",
+			"conditions":
+			[
+				{	
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition":
+					{
+						"type": "origins:ingredient",
+						"ingredient":
+						{
+							"item": "minecraft:spectral_arrow"
+						}
+					}	
+				},
+				{
+					"type": "origins:resource",
+					"resource": "tuco:steel_reserve",
+					"comparison": ">=",
+					"compare_to": 1
+				}
+			]
+		},
+		"hud_render":
+		{
+			"should_render": false
+		}
+	},
+	"falling":
+	{
+		"type": "origins:modify_projectile_damage",
+		"damage_condition":
+		{
+			"type": "origins:projectile",
+			"projectile": "minecraft:spectral_arrow"
+		},
+		"modifier":
+		{
+			"operation": "addition",
+			"value": -4
+		},
+		"self_action":
+		{
+			"type": "origins:set_fall_distance",
+			"fall_distance": 0
+		}
+	}
+}
